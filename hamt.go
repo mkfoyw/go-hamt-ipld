@@ -70,7 +70,7 @@ var ErrMalformedHamt = fmt.Errorf("HAMT node was malformed")
 // 			pointers [Pointer]
 // 		} representation tuple
 type Node struct {
-	Bitfield *big.Int   `refmt:"bf"`
+	Bitfield *big.Int   `refmt:"bf"` //位图，实现Pointer 数组压缩
 	Pointers []*Pointer `refmt:"p"`
 
 	bitWidth int
